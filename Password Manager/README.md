@@ -11,10 +11,15 @@ A terminal-based Password Manager built in Java that allows users to securely st
 6)File-based Storage – No database required
 
 --------Tech Stack-------
-  -> Language :Java
+
+   -> Language :Java
+   
   -> Encryption:AES
+  
   -> Hashing: SHA-256
+  
   -> Storage: File-based (text files)
+
 
 
 
