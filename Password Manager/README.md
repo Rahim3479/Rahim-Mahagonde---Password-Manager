@@ -3,6 +3,7 @@
 A terminal-based Password Manager built in Java that allows users to securely store, manage, and retrieve their passwords using AES encryption.
 
 ---- ---Features--------
+
 1)Master Password Protection  – Secure access to your vault
 
 2)AES Encryption/Decryption – All data is stored in encrypted form
@@ -24,6 +25,7 @@ A terminal-based Password Manager built in Java that allows users to securely st
   -> Hashing: SHA-256
   
   -> Storage: File-based (text files)
+
 
 
 
