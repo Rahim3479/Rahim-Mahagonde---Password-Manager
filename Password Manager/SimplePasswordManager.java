@@ -32,13 +32,13 @@ public class SimplePasswordManager {
                 case 5 -> System.out.println("Generated: " + generatePassword(12));
                 case 6 -> exportVault();
                 case 7 -> importVault();
-                case 8 -> { System.out.println("Bye!"); return; }
+                case 8 -> { System.out.println("Exit"); return; }
                 default -> System.out.println("Invalid choice");
             }
         }
     }
 
-    // ---------- Master Password ----------
+    // Master Password
     private static void createMasterPassword() throws Exception {
         System.out.print("Create master password: ");
         String master = sc.nextLine();
@@ -72,7 +72,7 @@ public class SimplePasswordManager {
         return new SecretKeySpec(keyBytes, "AES");
     }
 
-    // ---------- Password Manager -
+    //Password Manager 
     private static void addPassword() throws Exception {
         System.out.print("Website: ");
         String site = sc.nextLine();
@@ -94,7 +94,7 @@ public class SimplePasswordManager {
         if (!f.exists()) { System.out.println("No entries."); return; }
         try (BufferedReader br = new BufferedReader(new FileReader(f))) {
             String line;
-            System.out.println("\n--- Stored Passwords ---");
+            System.out.println("\n  Stored Passwords  ");
             while ((line = br.readLine()) != null) {
                 String[] p = decrypt(line).split(",");
                 System.out.println("Site: " + p[0] + ", User: " + p[1] + ", Pass: " + p[2]);
@@ -178,3 +178,4 @@ public class SimplePasswordManager {
         System.out.println("Vault restored from backup.");
     }
 }
+
